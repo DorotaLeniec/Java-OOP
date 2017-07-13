@@ -38,6 +38,11 @@ public class Person {
         this.surName = surname;
         this.age = age;
     }
+    @Override
+    public String toString(){
+        String text = "Jestem " + name + " " + surName + " mam " + age + "lat. HEJ!";
+        return text;
+    }
 
 
 }

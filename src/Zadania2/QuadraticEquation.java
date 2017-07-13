@@ -17,11 +17,11 @@ public class QuadraticEquation {
         return b*b - (4*a*c);
     }
 
-    public double calcX1(){
+    private double calcX1(){
             return (-b - Math.sqrt(calcDelta()))/2*a;
     }
 
-    public double calcX2(){
+    private double calcX2(){
             return (-b + Math.sqrt(calcDelta()))/2*a;
     }
     public void printEquation(){
@@ -42,6 +42,10 @@ public class QuadraticEquation {
         System.out.println("Delta = "+ calcDelta());
         System.out.println("x1 = "+ calcX1());
         System.out.println("x2 = "+ calcX2());
+    }
+
+    public void printSolution(){
+
     }
 
     public static void main(String[] args) {

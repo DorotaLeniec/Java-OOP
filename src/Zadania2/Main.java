@@ -15,5 +15,6 @@ public class Main {
 
         TeddyBear bear = new TeddyBear("Kolargol");
         System.out.println("miś miś miś : "+ bear.getName());
+
     }
 }
