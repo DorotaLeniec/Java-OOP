@@ -3,20 +3,14 @@ package family;
 /**
  * Created by dorka on 12.07.2017.
  */
-public class Mother {
+public class Mother extends FamilyMember{
 
-    private String name;
-
-    public String getName() {
-        return name;
+    public Mother(String name){
+        super(name);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Mother(String name) {
-
-        this.name = name;
+    @Override
+    public void introduce() {
+        System.out.println("Jestem mama mam na imie : " + getName());
     }
 }

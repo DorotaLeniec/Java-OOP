@@ -3,19 +3,13 @@ package family;
 /**
  * Created by dorka on 12.07.2017.
  */
-public class Father {
-    private String name;
-
-    public String getName() {
-        return name;
+public class Father extends FamilyMember{
+    public Father(String name){
+        super(name);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Father(String name) {
-
-        this.name = name;
+    @Override
+    public void introduce() {
+        System.out.println("Jestem tata nazywam sie: " + getName());
     }
 }
