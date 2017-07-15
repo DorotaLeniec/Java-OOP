@@ -18,12 +18,23 @@ public class QuadraticEquation {
     }
 
     private double calcX1(){
-            return (-b - Math.sqrt(calcDelta()))/2*a;
+        if(calcDelta()>=0) {
+            return (-b - Math.sqrt(calcDelta())) / 2 * a;
+        } else {
+            throw new NegativDeltaException();
+        }
     }
 
     private double calcX2(){
-            return (-b + Math.sqrt(calcDelta()))/2*a;
+        if(calcDelta()>=0) {
+            return (-b + Math.sqrt(calcDelta())) / 2 * a;
+        } else {
+            throw new NegativDeltaException();
+        }
+
     }
+
+
     public void printEquation(){
         System.out.println("Rownanie kwadratowe : "+ a+"x²+"+b+ "x+"+c);
     }
