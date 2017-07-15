@@ -16,6 +16,8 @@ public class ListExample {
         for(Integer item:list){
             System.out.println(item);
         }
+
+        list.remove((Object) 2);
     }
 
 }

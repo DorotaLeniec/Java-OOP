@@ -69,11 +69,12 @@ public class MyMathList {
     }
 
     public static boolean conjunction(List<Boolean> booleans){
-        do{
-            booleans.set(0,booleans.get(0) && booleans.get(1));
-            booleans.remove(1);
-
-        } while(booleans.size()==1);
-        return booleans.get(0);
+        boolean result = true;
+        for(boolean bol : booleans){
+            if(!bol){
+                result = bol;
+            }
+        }
+        return result;
     }
 }
