@@ -1,5 +1,6 @@
 package exceptions;
 
+
 import java.util.Random;
 
 /**
@@ -7,20 +8,18 @@ import java.util.Random;
  */
 public class Main {
     public static void main(String[] args) {
-        doSomething();
+        try{
+            doSomething();
+        }catch(MyOwnException e){
+            System.out.println("cos poszło nie tak.");
+        }
     }
 
-    private static void doSomething() {
+    private static void doSomething() throws MyOwnException {
         Random random = new Random();
-        {
-            try {
-                System.out.println("TRY ");
-                if(random.nextBoolean()) {
-                    throw new MyOwnException();
-                }
-            } catch (MyOwnException e) {
-                System.out.println("Catch");
-            }
+        System.out.println("TRY ");
+        if(random.nextBoolean()) {
+            throw new MyOwnException();
         }
     }
 }
