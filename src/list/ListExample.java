@@ -7,13 +7,13 @@ import java.util.ArrayList;
  */
 public class ListExample {
     public static void main(String[] args) {
-        List list = new ArrayList();
+        List<Integer> list = new ArrayList();
 
         list.add(4);
-        list.add("jojo");
-        list.add(true);
+        list.add(2);
+        list.add(3);
 
-        for(Object item:list){
+        for(Integer item:list){
             System.out.println(item);
         }
     }
