@@ -16,8 +16,6 @@ public class Duplicats {
 
         letters.addAll(Arrays.asList(letterArr));
         System.out.println("Czy sa powtórzenia? " + containsDuplicats(letters,letterArr));
-
-
     }
     public static boolean containsDuplicats(Set<String> letters, String[] letterArr){
         return letters.size()!=letterArr.length;
