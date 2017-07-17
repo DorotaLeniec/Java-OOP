@@ -17,6 +17,7 @@ public class Main {
         numberPairs.add(new NumberPair(2, 2));
         numberPairs.add(new NumberPair(2, 2));
 
+
         for (NumberPair numberPair : numberPairs) {
             numberPair.print();
         }
