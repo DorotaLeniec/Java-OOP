@@ -15,7 +15,7 @@ public class Person implements Comparable<Person>{
     }
 
     public String getName() {
-        return name;
+        return name + " " + getAge();
     }
 
     public int getAge() {
