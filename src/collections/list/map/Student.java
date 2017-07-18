@@ -6,6 +6,7 @@ package collections.list.map;
 public class Student {
     private String name;
     private String surName;
+    private long indexNo;
 
     public String getName() {
         return name;
@@ -19,11 +20,10 @@ public class Student {
         return indexNo;
     }
 
-    private long indexNo;
-
     public Student(String name, String surName, long indexNo) {
         this.name = name;
         this.surName = surName;
         this.indexNo = indexNo;
     }
+
 }

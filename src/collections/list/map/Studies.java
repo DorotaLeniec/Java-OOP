@@ -9,14 +9,15 @@ import java.util.TreeMap;
  */
 public class Studies {
     public static void main(String[] args) {
+
         Student stu1 = new Student("Dorota","Leniec",100200);
         Student stu2 = new Student("Kasia","Bobek",100400);
         Student stu3 = new Student("Antek","Kowalik",100500);
 
-        Map<String,Long> students = new TreeMap<>();
-        students.put(stu1.getName(),stu1.getIndexNo());
-        students.put(stu2.getName(),stu2.getIndexNo());
-        students.put(stu3.getName(),stu3.getIndexNo());
+        Map<Long,Student> students = new TreeMap<>();
+        students.put(stu1.getIndexNo(),stu1);
+        students.put(stu2.getIndexNo(),stu2);
+        students.put(stu3.getIndexNo(),stu3);
         System.out.println("Ilosc studentów " + students.size());
         System.out.println(students);
 
