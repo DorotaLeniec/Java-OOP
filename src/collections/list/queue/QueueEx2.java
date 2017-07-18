@@ -9,8 +9,7 @@ import java.util.Queue;
  */
 public class QueueEx2 {
     public static void main(String[] args) {
-        Comparator<Person> comparator = new AgeComparator();
-        Queue<Person> kolejka = new PriorityQueue<>(10,comparator);
+        Queue<Person> kolejka = new PriorityQueue<>((o1, o2) -> o1.getName().compareTo(o2.getName()));
         kolejka.offer(new Person("Dorota",24));
         kolejka.offer(new Person("Zbyszek",24));
         kolejka.offer(new Person("Basia",26));
