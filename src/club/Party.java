@@ -6,6 +6,7 @@ package club;
 public class Party {
     public static void main(String[] args) {
         Club club = new Club();
+        Club kidsPlay = new ClubForKids();
         Person[] people = {
                 new Person("Ania","Kowalska",12),
                 new Person("Basia","Kowalska",22),
@@ -14,13 +15,25 @@ public class Party {
                 new Person("Bogdan","Kowalska",44),
                 new Person("Danka","Kowalska",16),
         };
-
         for(Person person:people){
             try {
                 club.enter(person);
             } catch (NoAdultException e ){
-                System.out.println(person.getName() + " sory jestes za mloda.");
+                try{
+                    kidsPlay.enter(person);
+                } catch (NoKidException err){
+
+                }
             }
         }
+
+//        System.out.println("_________________________________");
+//        for(Person person:people){
+//            try{
+//                kidsPlay.enter(person);
+//            } catch (NoKidException e) {
+//
+//            }
+//        }
     }
 }

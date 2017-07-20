@@ -21,13 +21,13 @@ public class QuadraticEquationConsoleInterface {
                     try {
                         equation.printX1();
                     } catch (NegativDeltaException e) {
-                        System.out.println("Delta jest ujemna. Brak rozwiązan rzeczywistych.");
+                        System.out.println("DELTA UJEMNA ZIOM");
                     }
                 } else {
                     try {
                         equation.printX2();
                     } catch (NegativDeltaException e) {
-                        System.out.println("Delta jest ujemna. Brak rozwiązan rzeczywistych.");
+                        System.out.println("DELTA UJEMNA ZIOM");
                     }
                 }
             } else if (step == 5) {

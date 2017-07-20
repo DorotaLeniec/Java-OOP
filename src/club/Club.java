@@ -6,7 +6,7 @@ package club;
 public class Club {
     void enter(Person person){
         if(person.getAge()>=18){
-            System.out.println("WITAJ! " + person.getName() + " milo Cie widziec zaczynamy zabawe.");
+            System.out.println("WITAJ! " + person.getName() + " Starzy.");
         }else {
             throw new NoAdultException();
         }

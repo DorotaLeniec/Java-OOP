@@ -8,6 +8,7 @@ public class QuadraticEquation {
     private double b;
     private double c;
 
+
     public QuadraticEquation(double a, double b, double c){
         this.a = a;
         this.b = b;
@@ -17,7 +18,7 @@ public class QuadraticEquation {
         return b*b - (4*a*c);
     }
 
-    private double calcX1(){
+    private double calcX1()throws NegativDeltaException{
         if(calcDelta()>=0) {
             return (-b - Math.sqrt(calcDelta())) / 2 * a;
         } else {
@@ -25,7 +26,7 @@ public class QuadraticEquation {
         }
     }
 
-    private double calcX2(){
+    private double calcX2()throws NegativDeltaException{
         if(calcDelta()>=0) {
             return (-b + Math.sqrt(calcDelta())) / 2 * a;
         } else {
@@ -38,17 +39,20 @@ public class QuadraticEquation {
     public void printEquation(){
         System.out.println("Rownanie kwadratowe : "+ a+"x²+"+b+ "x+"+c);
     }
+
     public void printX1(){
-        System.out.println("x1 = "+ calcX1());
+            System.out.println("x1 = " + calcX1());
+
     }
     public void printX2(){
-        System.out.println("x2 = "+ calcX2());
+            System.out.println("x2 = " + calcX2());
+
     }
     public void printDelta(){
         System.out.println("Delta = "+ calcDelta());
     }
 
-    public void printData(){
+    public void printData() throws NegativDeltaException{
         System.out.println("Rownanie kwadratowe : "+ a+"x²+"+b+ "x+"+c);
         System.out.println("Delta = "+ calcDelta());
         System.out.println("x1 = "+ calcX1());
@@ -59,9 +63,6 @@ public class QuadraticEquation {
 
     }
 
-    public static void main(String[] args) {
-        QuadraticEquation equation = new QuadraticEquation(5,2,1);
-        equation.printData();
-    }
+
 
 }
