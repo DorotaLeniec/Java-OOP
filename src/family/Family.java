@@ -19,6 +19,4 @@ public class Family {
       Family family  = new Family();
       family.introduce();
     }
-
-
 }

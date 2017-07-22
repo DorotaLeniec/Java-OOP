@@ -1,4 +1,4 @@
-package list;
+package collections.list;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +18,16 @@ public class Main {
         }
 
         List<Integer> numbersList = new ArrayList<>();
-        numbersList.add(2);
-        numbersList.add(9);
         numbersList.add(1);
+        numbersList.add(2);
+        numbersList.add(4);
+        numbersList.add(2);
+        numbersList.add(5);
+        numbersList.add(12);
         numbersList.add(3);
-        numbersList.add(6);
-        int[] numbersArr = {4,9,2,5,6};
+        numbersList.add(2);
+
+        int[] numbersArr = {4,2,2,1,5,29,3,8};
         int pairs=0;
         for(int i=0;i<numbersArr.length;i++){
             if(numbersArr[i]==numbersList.get(i)){
